@@ -1,0 +1,32 @@
+# Default training configuration
+
+# Training parameters
+num_epochs: 5
+learning_rate: 2e-5
+weight_decay: 0.01
+warmup_steps: 0
+gradient_accumulation_steps: 1
+max_grad_norm: 1.0
+
+# Optimizer
+optimizer: adamw
+adam_epsilon: 1e-8
+adam_beta1: 0.9
+adam_beta2: 0.999
+
+# Learning rate scheduler
+lr_scheduler: linear
+lr_scheduler_warmup_ratio: 0.1
+
+# Early stopping
+early_stopping_patience: 3
+early_stopping_metric: val_loss
+early_stopping_mode: min
+
+# Checkpointing
+save_total_limit: 3
+save_strategy: epoch
+evaluation_strategy: epoch
+
+# Mixed precision
+use_fp16: false

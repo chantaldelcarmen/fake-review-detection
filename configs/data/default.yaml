@@ -1,0 +1,25 @@
+# Default data configuration
+
+# Data paths
+train_file: ${data_dir}/processed/train.csv
+val_file: ${data_dir}/processed/val.csv
+test_file: ${data_dir}/processed/test.csv
+
+# Data columns
+text_column: text
+label_column: label
+
+# Data preprocessing
+lowercase: true
+remove_urls: true
+max_length: 512
+
+# Data splits
+train_ratio: 0.8
+val_ratio: 0.1
+test_ratio: 0.1
+
+# Data loading
+batch_size: 16
+num_workers: 4
+shuffle_train: true

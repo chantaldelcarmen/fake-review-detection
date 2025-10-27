@@ -1,0 +1,29 @@
+defaults:
+  - data: default
+  - model: roberta_base
+  - training: default
+  - _self_
+
+# Experiment settings
+experiment_name: fake_review_detection
+seed: 42
+debug: false
+
+# Paths
+data_dir: data
+output_dir: experiments
+checkpoint_dir: ${output_dir}/checkpoints
+log_dir: ${output_dir}/logs
+
+# Device
+device: cuda  # cuda, cpu, or auto
+
+# Logging
+use_wandb: false
+wandb_project: fake-review-detection
+wandb_entity: null
+
+# Feature ablation
+use_linguistic_features: true
+use_behavioral_features: true
+use_metadata_features: true
