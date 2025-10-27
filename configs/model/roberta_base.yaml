@@ -1,0 +1,13 @@
+# RoBERTa base model configuration
+
+model_name: roberta-base
+num_labels: 2
+dropout_rate: 0.1
+
+# Feature fusion
+use_additional_features: false
+num_additional_features: 0
+
+# Model architecture
+freeze_encoder: false
+unfreeze_after_epoch: 0
